@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="container">
+    <h2>Grupos</h2>
+    <br>
+    <button (click)="nuevoGrupo()" type="button" class="btn btn-dark">Nuevo Grupo</button><br><br>
+   
+    <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Integrantes</th>
+            <th scope="col">Fecha debut</th>
+            <th scope="col">Cantidad de álbumes</th>
+            <th scope="col">Imagen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let grupo of grupos" (click)="editarGrupo(+grupo.id)">
+            <td hidden>{{grupo.id}}</td>
+            <td>{{grupo.nombre}}</td>
+            <td>{{grupo.integrantes}}</td>
+            <td>{{grupo.fechaDebut}}</td>
+            <td>{{grupo.cantidadAlbums}}</td>
+            <td><img src="{{grupo.imagen}}"  style="max-width: 100px; height: 100px;">
+            <button (click)="onDelete(+grupo.id)">Eliminar grupo</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<app-footer></app-footer>

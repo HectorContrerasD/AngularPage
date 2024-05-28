@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="hidden" [(ngModel)="id"]>
+          <label for="nombre">Nombre</label><br>
+          <input type="text" class="form-control" placeholder="Nombre del grupo" [(ngModel)="nombre"]><br><br>
+          <label for="integrantes">Integrantes</label><br>
+          <input type="text" class="form-control" placeholder="Integrantes del grupo" [(ngModel)="integrantes"]><br><br>
+          <label for="fechaDebut">Fecha de debut</label><br>
+          <input type="date" class="form-control" [(ngModel)="fechaDebut"]><br><br>
+          <label for="cantidadAlbums">Cantidad de álbumes lanzados</label><br>
+          <input type="number" class="form-control" [(ngModel)="fechaDebut"]><br><br>
+          <label for="imagen">Imagen</label><br>
+          <input type="text" class="form-control" placeholder="URL de la imagen" [(ngModel)="imagen"]><br><br>
+          
+          <input type="submit" value="Guardar">
+        </div>
+    </form>
+ 
+</div>
+
+<app-footer></app-footer>
